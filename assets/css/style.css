@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0e17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.pemuat {
+    width: 80px;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: border-box;
+    color: #fffffe;
+    background: radial-gradient(circle 3px, currentColor 95%, #0000),
+        linear-gradient(currentColor 50%, #0000 0) 50%/3px 80% no-repeat,
+        linear-gradient(90deg, currentColor 50%, #0000 0) 50%/60% 3px no-repeat;
+    position: relative;
+}
+
+.pemuat:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    inset: 100% 10% auto;
+    background: radial-gradient(circle closest-side at 50% calc(100% - 10px),
+            currentColor 94%,
+            #0000),
+        linear-gradient(currentColor 0 0) top/3px 80% no-repeat;
+    transform-origin: top;
+    animation: gerak 2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes gerak {
+    100% {
+        transform: rotate(0.4deg);
+    }
+}
