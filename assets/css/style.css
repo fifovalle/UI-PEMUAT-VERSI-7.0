@@ -16,7 +16,6 @@ body {
     width: 80px;
     aspect-ratio: 1;
     border: 2px solid;
-    box-sizing: border-box;
     color: #fffffe;
     background: radial-gradient(circle 3px, currentColor 95%, #0000),
         linear-gradient(currentColor 50%, #0000 0) 50%/3px 80% no-repeat,
